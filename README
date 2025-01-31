@@ -13,6 +13,8 @@ docker compose exec app bash
 cd app
 
 sh gradlew build
+
+java -jar build/libs/app-0.0.1-SNAPSHOT.jar
 ```
 
 http://localhost:8080/

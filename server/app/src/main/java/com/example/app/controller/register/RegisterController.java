@@ -1,4 +1,4 @@
-package com.example.app.controller; // このファイルが属するパッケージ（フォルダ）
+package com.example.app.register.controller; // このファイルが属するパッケージ（フォルダ）
 
 // 必要なクラスをインポートします
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.app.model.User;
-import com.example.app.model.UserDto;
-import com.example.app.service.UserService;
+import com.example.app.model.user.User;
+import com.example.app.model.user.UserDto;
+import com.example.app.service.user.UserService;
 
 @Controller // このクラスがWebコントローラーであることを示します
 public class RegisterController {

@@ -1,4 +1,4 @@
-package com.example.app.service; // このファイルが属するパッケージ（フォルダ）
+package com.example.app.user.service; // このファイルが属するパッケージ（フォルダ）
 
 // 必要なクラスをインポートします
 import jakarta.transaction.Transactional;
@@ -9,9 +9,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.example.app.model.User;
-import com.example.app.model.UserDto;
-import com.example.app.repository.UserRepository;
+import com.example.app.model.user.User;
+import com.example.app.model.user.UserDto;
+import com.example.app.repository.user.UserRepository;
 
 @Service // このクラスがサービス層のクラスであることを示します
 public class UserService implements UserDetailsService { // UserDetailsServiceインターフェースを実装しています

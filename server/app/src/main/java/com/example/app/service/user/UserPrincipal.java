@@ -1,4 +1,4 @@
-package com.example.app.service; // このファイルが属するパッケージ（フォルダ）
+package com.example.app.user.service; // このファイルが属するパッケージ（フォルダ）
 
 // 必要なツールをインポートしています
 import java.util.Collection;
@@ -8,7 +8,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 // Userクラスを使うためにインポートしています
-import com.example.app.model.User;
+import com.example.app.model.user.User;
 
 // UserDetailsインターフェースを実装したUserPrincipalというクラスを作成します。これはSpring Securityでユーザー情報を扱うためのクラスです。
 public class UserPrincipal implements UserDetails {

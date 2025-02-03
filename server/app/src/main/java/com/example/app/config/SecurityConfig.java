@@ -24,7 +24,7 @@ public class SecurityConfig { // セキュリティ設定のクラス
         http
             .authorizeHttpRequests(authz  ->  // 認証リクエストを設定します
                 authz 
-                    .requestMatchers("/css/**", "/js/**", "/login", "/register", "/").permitAll() // "/login"と"/register"へのリクエストは認証なしで許可します
+                    .requestMatchers("/css/**", "/js/**", "/login", "/register", "/error/**").permitAll() // "/login"と"/register"へのリクエストは認証なしで許可します
                     .anyRequest().authenticated() // それ以外の全てのリクエストは認証が必要です
             )
             .formLogin(login  ->  // フォームベースのログインを設定します

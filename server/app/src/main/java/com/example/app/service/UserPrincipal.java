@@ -8,7 +8,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 // Userクラスを使うためにインポートしています
-import com.example.app.entity.User;
+import com.example.app.model.User;
 
 // UserDetailsインターフェースを実装したUserPrincipalというクラスを作成します。これはSpring Securityでユーザー情報を扱うためのクラスです。
 public class UserPrincipal implements UserDetails {

@@ -4,7 +4,7 @@ package com.example.app.repository;  // このファイルが属するパッケ�
 import org.springframework.data.jpa.repository.JpaRepository;
 
 // Userクラスを使うためにインポートしています
-import com.example.app.entity.User;
+import com.example.app.model.User;
 
 // UserRepositoryというインターフェースを作成します。JpaRepositoryを拡張して、UserオブジェクトとそれらのIDとしてLong型を扱えるようにします。
 public interface UserRepository extends JpaRepository<User, Long> {

@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.example.app.entity.User;
-import com.example.app.entity.UserDto;
+import com.example.app.model.User;
+import com.example.app.model.UserDto;
 import com.example.app.repository.UserRepository;
 
 @Service // このクラスがサービス層のクラスであることを示します

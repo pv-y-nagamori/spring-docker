@@ -1,4 +1,4 @@
-package com.example.app.entity; // このファイルが属するパッケージ（フォルダ）
+package com.example.app.model; // このファイルが属するパッケージ（フォルダ）
 
 // 入力チェックをするためのツールをインポートしています。
 import jakarta.validation.constraints.NotEmpty;

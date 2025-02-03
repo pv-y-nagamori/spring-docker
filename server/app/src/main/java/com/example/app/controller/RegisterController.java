@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.app.entity.User;
-import com.example.app.entity.UserDto;
+import com.example.app.model.User;
+import com.example.app.model.UserDto;
 import com.example.app.service.UserService;
 
 @Controller // このクラスがWebコントローラーであることを示します

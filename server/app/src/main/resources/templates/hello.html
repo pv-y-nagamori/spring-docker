@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}">
+    <script th:src="@{/bootstrap.min.js}"></script> 
 </head>
 <body>
-<!--　追記記述　-->
-<h1>Hello Thymeleaf View!!!</h1>
+  <main>
+    <div class="container">
+      <h1 th:text="'Hello Thymeleaf View!!!'"></h1>
+
+      <button class="btn btn-primary">btn</button>
+
+      <p th:text="${user.id}"></p>
+      <p th:text="${user.name}"></p>
+    </div>
+
+  </main>
 </body>
 </html>

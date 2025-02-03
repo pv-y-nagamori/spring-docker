@@ -14,10 +14,17 @@ cd app
 
 sh gradlew build
 
+OR
+
+sh gradlew build --continuous
+
 java -jar build/libs/app-0.0.1-SNAPSHOT.jar
 ```
 
 http://localhost:8080/
+
+TODO:
+https://qiita.com/EasyCoder/items/3a717db1761ddd9d3ae0
 
 
 ## ※ > xargs is not available → ビルド出来ない場合

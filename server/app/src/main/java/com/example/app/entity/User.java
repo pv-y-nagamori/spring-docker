@@ -1,36 +1,63 @@
-package com.example.app.entity;
+package com.example.app.entity;  // このファイルが属するパッケージ（フォルダ）
 
+// 以下の部分はデータベースとのやり取りに必要な情報を持つためのものです。
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "users")
+@Entity  // これはデータベースのテーブルを表しています
+@Table(name = "Users")  // このクラスが対応するテーブルの名前は "Users" です
 public class User {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
-  private String name;
+    @Id  // これが各ユーザを一意に識別するためのIDとなります
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // IDは自動的に増加します
+    @Column(name = "id")  // データベースに合わせてカラム名を修正
+    private Integer id;
 
-  protected User() {}
+    @Column(name = "username", nullable = false, unique = true)  // "username" カラム。各ユーザーのユーザー名を表します。同じ名前のユーザーは存在できません
+    private String username;
 
-  public User(String name) {
-    this.name = name;
-  }
+    @Column(name = "password", nullable = false)  // "password" カラム。ユーザーのパスワードを表します
+    private String password;
 
-  public Long getId() {
-    return id;
-  }
+    @Column(name = "email", nullable = false, unique = true)  // "email" カラム。ユーザーのメールアドレスを表します。同じメールアドレスのユーザーは存在できません
+    private String email;
 
-  public String getName() {
-    return name;
-  }
+    // 以下は各値を取得するためのメソッド（ゲッター）です。
+    public Integer getId() {
+        return this.id;
+    }
 
-  @Override
-  public String toString() {
-    return String.format("{id:%d,name:%s}", id, name);
-  }
+    public String getUsername() {
+        return this.username;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    // 以下は各値を設定するためのメソッド（セッター）です。
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
+

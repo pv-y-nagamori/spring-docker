@@ -24,15 +24,15 @@ public class LoginController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication(); // 現在のユーザーの認証情報を取得します
         if (authentication != null && authentication.isAuthenticated()) { // ユーザーがログインしている場合
             logger.info("login!!");
-            return "redirect:/index";  // "/index"にリダイレクトします
+            return "redirect:/menu";  // "/index"にリダイレクトします
         }
         logger.info("not login!!");
         return "redirect:/login"; // ユーザーがログインしていない場合、"/login"にリダイレクトします
     }
     
-    @GetMapping("/index") // "/index"というURLに対するGETリクエストを処理します
-    public String index() {
-        return "index"; // index.htmlを表示します
+    @GetMapping("/menu")
+    public String menu() {
+        return "menu";
     }
 }
 

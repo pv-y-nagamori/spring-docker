@@ -9,30 +9,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Controller // このクラスがWebコントローラーであることを示します
+@Controller
 public class LoginController {
 
-    private final Logger logger = LoggerFactory.getLogger(LoginController.class); // ログ インスタンス
+    private final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
-    @GetMapping("/login") // "/login"というURLに対するGETリクエストを処理します
+    @GetMapping("/login")
     public String login() {
-        return "login";  // login.htmlを表示します
+        return "login";
     }
     
-    @GetMapping("/") // ルートURL ("/") に対するGETリクエストを処理します
+    @GetMapping("/")
     public String redirectToIndex() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication(); // 現在のユーザーの認証情報を取得します
-        if (authentication != null && authentication.isAuthenticated()) { // ユーザーがログインしている場合
+        // ユーザー認証情報取得
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        // ユーザーがログインしている場合
+        if (authentication != null && authentication.isAuthenticated()) {
             logger.info("login!!");
-            return "redirect:/menu";  // "/index"にリダイレクトします
+            return "redirect:/menu";
         }
         logger.info("not login!!");
-        return "redirect:/login"; // ユーザーがログインしていない場合、"/login"にリダイレクトします
-    }
-    
-    @GetMapping("/menu")
-    public String menu() {
-        return "menu";
+        return "redirect:/login";
     }
 }
 

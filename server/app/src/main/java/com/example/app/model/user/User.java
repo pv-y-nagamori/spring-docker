@@ -1,4 +1,4 @@
-package com.example.app.user.model;  // このファイルが属するパッケージ（フォルダ）
+package com.example.app.model.user;  // このファイルが属するパッケージ（フォルダ）
 
 // 以下の部分はデータベースとのやり取りに必要な情報を持つためのものです。
 import jakarta.persistence.Column;

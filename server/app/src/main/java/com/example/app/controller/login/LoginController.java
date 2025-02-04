@@ -1,4 +1,4 @@
-package com.example.app.login.controller; // このファイルが属するパッケージ（フォルダ）
+package com.example.app.controller.login; // このファイルが属するパッケージ（フォルダ）
 
 // 必要なクラスをインポートします
 import org.springframework.security.core.Authentication;
@@ -26,6 +26,7 @@ public class LoginController {
             logger.info("login!!");
             return "redirect:/index";  // "/index"にリダイレクトします
         }
+        logger.info("not login!!");
         return "redirect:/login"; // ユーザーがログインしていない場合、"/login"にリダイレクトします
     }
     

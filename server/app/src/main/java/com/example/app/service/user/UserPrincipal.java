@@ -1,4 +1,4 @@
-package com.example.app.user.service; // このファイルが属するパッケージ（フォルダ）
+package com.example.app.service.user; // このファイルが属するパッケージ（フォルダ）
 
 // 必要なツールをインポートしています
 import java.util.Collection;

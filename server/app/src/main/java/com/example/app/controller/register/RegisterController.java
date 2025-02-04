@@ -1,4 +1,4 @@
-package com.example.app.register.controller; // このファイルが属するパッケージ（フォルダ）
+package com.example.app.controller.register; // このファイルが属するパッケージ（フォルダ）
 
 // 必要なクラスをインポートします
 import org.springframework.beans.factory.annotation.Autowired;

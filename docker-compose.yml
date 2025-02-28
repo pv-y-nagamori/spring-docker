@@ -6,7 +6,7 @@ services:
       - 8080:8080
     tty: true
     volumes:
-      - ./server:/srv:cached
+      - ~/.gradle:/root/.gradle  # Gradle キャッシュを共有
     depends_on:
       - db
 
